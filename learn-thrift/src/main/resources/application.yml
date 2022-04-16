@@ -1,0 +1,23 @@
+server:
+  port: 8080
+
+logging:
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %green(%-5level) %magenta([%-50.50class]) >>> %cyan(%msg) %n"
+
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+  datasource:
+    url: jdbc:mysql://192.168.36.136:3306/jdbc
+    hikari:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      username: root
+      password: 123
+      maximum-pool-size: 50
+
+  redis:
+    host: 192.168.36.136
+    port: 6379
+    password: 123
